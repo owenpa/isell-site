@@ -17,15 +17,7 @@ module.exports = {
     'react',
   ],
   rules: {
-  },
-  eslintConfig: {
-    extends: [
-      'react-app',
-      'react-app/jest'
-    ],
-    rules: {
-      'react/jsx-uses-react': 'off',
-      'react/react-in-jsx-scope': 'off'
-    }
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
   },
 };
