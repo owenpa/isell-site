@@ -7,6 +7,7 @@ $accent: #9576c6;
 @import url('https://fonts.googleapis.com/css?family=Lato:700|Lato:400');
 
 html {
+  background-color: $bg;
   color: $text;
   font-size: 1em;
 }
@@ -39,6 +40,8 @@ h1, h2, h3, h4, h5 {
     padding: 0.8rem;
   }
   ul {
+    z-index: 1000;
+    background-color: white;
     position: fixed;
     list-style-type: none !important;
     top: 0;
@@ -120,19 +123,41 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+#pricing-container {
+  margin-top: 60px;
+  width: 100%;
+  display: flex;
+}
+
+#tier-grid {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 150px 150px;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+
+  p {
+    margin:0;
+    align-self: center;
+    text-align: center;
+  }
+}
+
 #features-container {
   margin-top: 60px;
   width: 100%;
   display: flex;
 }
 
-#features-left {
+#grid-image-left, #grid-image-right {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 50%;
+  height: 400px;
 }
 
-#features-right {
+#grid-left, #grid-right {
   width: 50%;
 }
 
@@ -146,9 +171,7 @@ h1, h2, h3, h4, h5 {
   grid-row-gap: 0px;
 }
 
-#features-list-item {
-
-}
+#features-list-item { }
 
 .container-title {
   color: $primary;

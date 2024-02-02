@@ -3,10 +3,10 @@ import phone from './assets/frontfacingphone.png';
 function Features() {
   return (
     <div id="features-container">
-      <div id="features-left">
+      <div id="grid-image-left">
         <img id="front-facing-phone" src={phone} alt="Front facing blank iPhone" />
       </div>
-      <div id="features-right">
+      <div id="grid-right">
         <p className="container-title">FEATURES</p>
         <h2>Prominent feature A</h2>
         <p className="faint-description">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

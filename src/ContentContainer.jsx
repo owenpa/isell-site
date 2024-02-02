@@ -1,6 +1,7 @@
 import Hero from './Hero';
 import InfoBar from './InfoBar';
 import Features from './Features';
+import Pricing from './Pricing';
 
 function ContentContainer() {
   return (
@@ -8,6 +9,7 @@ function ContentContainer() {
       <Hero />
       <InfoBar />
       <Features />
+      <Pricing />
     </div>
   );
 }
