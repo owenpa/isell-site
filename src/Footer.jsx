@@ -38,7 +38,7 @@ function Footer() {
             <form action="">
               <label htmlFor="email" className="bold-text">Enter your email:</label>
               <input type="email" id="email" name="email" className="email-input" />
-              <input type="submit" className="email-button" value="Subscribe" />
+              <input type="button" className="email-button" value="Subscribe" />
             </form>
           </ul>
         </div>
