@@ -227,7 +227,7 @@ h1, h2, h3, h4, h5 {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 21.440px;
+  margin-top: 21.440px  ;
 }
 
 #self-portrait {
@@ -237,6 +237,73 @@ h1, h2, h3, h4, h5 {
 
 .tech-logo {
   max-width: 60px;
+}
+
+#footer-container {
+  background-color: white;
+  margin-top: 100px;
+  footer {
+    max-width: 80%;
+    margin: auto;
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // align-items: center;
+  }
+  ul {
+    list-style-type: none !important;
+  }
+  li, label {
+    padding: 5px;
+    letter-spacing: 0.5px;
+  }
+  a {
+    text-decoration: none;
+    color: $text;
+    transition: 0.2s;
+    &:hover {
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+  }
+  .email-button {
+    margin: 5px;
+    display: block;
+    color: $primary;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 3px;
+    background-color: rgba($primary, 10%);
+    border-top: 2px solid rgba($primary, 30%);
+    border-right: 2px solid rgba($primary, 30%);
+    border-bottom: 5px solid rgba($primary, 30%);
+    border-left: 2px solid rgba($primary, 30%);
+    padding: 10px;
+    transition: 0.2s;
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+  .email-input {
+    margin: 5px;
+    display: block;
+    text-decoration: none;
+    padding: 5px;
+    border-top: 2px solid rgba($primary, 70%);
+    border-right: 2px solid rgba($primary, 70%);
+    border-bottom: 5px solid rgba($primary, 70%);
+    border-left: 2px solid rgba($primary, 70%);
+    border-radius: 2px;
+    &:focus {
+      outline: none;
+      border-top: 2px solid rgba($primary, 90%);
+      border-right: 2px solid rgba($primary, 90%);
+      border-bottom: 5px solid rgba($primary, 90%);
+      border-left: 2px solid rgba($primary, 90%);  
+    }
+  }
+
 }
 
 #appstore-badge { width: 100px; }
