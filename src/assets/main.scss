@@ -8,6 +8,8 @@ $accent: #9576c6;
 
 html {
   background-color: $bg;
+  background: $bg;
+  background: linear-gradient(0deg, rgba($primary, 14%) 0%, $bg 35%, $bg 80%, rgba($primary, 17%) 100%);
   color: $text;
   font-size: 1em;
   scroll-behavior: smooth;
@@ -63,6 +65,9 @@ h1, h2, h3, h4, h5 {
       &:hover {
         font-weight: bolder;
         text-decoration: underline;
+      }
+      &:active {
+        color: $text;
       }
     }
   }
@@ -156,6 +161,23 @@ h1, h2, h3, h4, h5 {
   margin-top: 100px;
   width: 100%;
   display: flex;
+  #pricing-feature-list { 
+    // list-style-type: none !important;
+    list-style-type: square; 
+    margin: 0;
+    padding: 0;
+  }
+  .pricing-list-item {
+    transition: 0.2s;
+    background-color: rgba($primary, 8%);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px 0px;
+    width: fit-content;
+    &:hover {
+      background-color: rgba($primary, 10%);
+    }
+  }
 }
 
 #tier-grid {
@@ -172,11 +194,17 @@ h1, h2, h3, h4, h5 {
   }
 
   button {
+    transition: 0.2s;
     border: none;
     border-radius: 25px;
     box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
     font-weight: bold;
     font-size: 1.5rem;
+    &:hover {
+      font-size: 1.6rem;
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 12px;
+      border: 5px solid rgba(black, 5%);
+    }
   }
 
   #iron-button {
@@ -184,19 +212,16 @@ h1, h2, h3, h4, h5 {
     color: #5c5c5c;
     text-shadow: rgb(122, 122, 122) 1px 1px 2px;
   }
-
   #silver-button {
     background-color: #727272;
     color: #1d1d1d;
     text-shadow: rgb(71, 71, 71) 1px 1px 2px;
   }
-
   #gold-button {
     background-color: #FE9C2A;
     color: #75440b;
     text-shadow: #75440b 1px 1px 2px;
   }
-
   #platinum-button {
     background-color: #A4CEF5;
     color: #4b7194;
@@ -239,6 +264,12 @@ h1, h2, h3, h4, h5 {
     height: 50px;
     width: 50px;
     box-shadow: rgba(0, 0, 0, 0.08) 2px 3px 10px;
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  button:hover {
+    transition: 0.2s;
+    font-size: 1.2rem;
   }
   p { margin:0 }
   .feature-title {
@@ -249,24 +280,41 @@ h1, h2, h3, h4, h5 {
   }
 }
 
-#features-list-item { }
+#features-list-item:hover {
+  transition: 0.2s;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.04));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.04));
+}
 
 .container-title {
   color: $primary;
   letter-spacing: 4px;
   font-size: 0.8rem;
   &:hover {
-    transition: 0.2s;
+    transition: 0.1s;
     letter-spacing: 6px;
   }
+}
+.triangle {
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 0 100px 150px 100px;
+  border-color: transparent transparent #FF4532 transparent;
+  transform: rotate(0deg);
 }
 
 #about-container {
   margin-top: 100px;
+  hr {
+    // border: 1px solid $primary;
+    border: none;
+    border-top: 1px solid $primary;
+  }
 }
 
 #developer-container {
-  margin-top: 100px;
+  margin-top: 80px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -285,22 +333,35 @@ h1, h2, h3, h4, h5 {
 
 #socials-container {
   gap: 1rem;
+
   .tech-logo {
+    transition: 0.2s;
     max-width: 60px;
+    &:hover {
+      transform: translateY(-10px);
+    }
   }
 }
 
 #tech-stack-container {
   gap: 1.3rem;
   .tech-logo {
-    max-width: 40px;   
+    max-width: 40px;
+    transition: 0.2s;
+    &:hover {
+      transform: translateY(-10px);
+    }
   }
 }
 
 #self-portrait {
+  transition: 0.2s;
   max-width: 200px;
   border-radius: 25px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 
@@ -308,6 +369,7 @@ h1, h2, h3, h4, h5 {
 #footer-container {
   background-color: white;
   margin-top: 100px;
+  box-shadow: 0px -5px 50px rgba($second, 10%);
   footer {
     max-width: 80%;
     margin: auto;
@@ -315,7 +377,6 @@ h1, h2, h3, h4, h5 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    // align-items: center;
   }
   ul {
     list-style-type: none !important;
