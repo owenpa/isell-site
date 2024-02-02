@@ -10,6 +10,7 @@ html {
   background-color: $bg;
   color: $text;
   font-size: 1em;
+  scroll-behavior: smooth;
 }
 
 #root {
@@ -57,6 +58,13 @@ h1, h2, h3, h4, h5 {
     padding: 1rem;
     font-size: 0.8rem;
     font-weight: 600;
+    a {
+      text-decoration: none;
+      &:hover {
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -70,34 +78,49 @@ h1, h2, h3, h4, h5 {
 }
 
 #hero-container {
-  height: 40vh;
+  margin-top: 10vh;
   display: flex;
   align-items: center;
 }
 
 #hero-app-download {
   display: grid;
+  align-items: center;
   grid-template-columns: repeat(2, 0fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 0fr);
   grid-column-gap: 10px;
   grid-row-gap: 0px;
+  img:hover {
+    transition: 0.2s;
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+  }
+  .app-rating {
+    color: gold;
+  }
 }
 
 #angled-phone {
   width: 230px;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
 }
 
 #front-facing-phone {
   width: 160px;
   height: fit-content;
+  -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+  filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
 }
 
 #info-bar-container {
   background-color: rgba($primary, 5%);
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.03) 0px 4px 1px;
   width: 100%;
+  margin-bottom: 10vh;
   ul {
     display: flex;
     flex-wrap: nowrap;
@@ -121,6 +144,11 @@ h1, h2, h3, h4, h5 {
   .info-stat {
     font-size: 2rem;
     color: $primary;
+    &:hover {
+      transition: 0.2s;
+      -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+    }
   }
 }
 
@@ -195,13 +223,30 @@ h1, h2, h3, h4, h5 {
 }
 
 #features-list {
-  p { margin:0 }
   align-items: center;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 50px 1fr;
   grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  grid-column-gap: 20px;
+  grid-row-gap: 10px;
+  button {
+    justify-self: center;
+    width: fit-content;
+    outline: none;
+    background: $bg;
+    border: none;
+    border-radius: 100px;
+    height: 50px;
+    width: 50px;
+    box-shadow: rgba(0, 0, 0, 0.08) 2px 3px 10px;
+  }
+  p { margin:0 }
+  .feature-title {
+    font-size: 1.2rem;
+    letter-spacing: 0.5px;
+    color: black;
+    font-weight: bold;
+  }
 }
 
 #features-list-item { }
@@ -210,6 +255,10 @@ h1, h2, h3, h4, h5 {
   color: $primary;
   letter-spacing: 4px;
   font-size: 0.8rem;
+  &:hover {
+    transition: 0.2s;
+    letter-spacing: 6px;
+  }
 }
 
 #about-container {
@@ -223,21 +272,38 @@ h1, h2, h3, h4, h5 {
   align-items: center;
 }
 
-#tech-stack-container {
+#tech-stack-container, #socials-container {
   display: flex;
   width: 100%;
   justify-content: center;
-  margin-top: 21.440px  ;
+  margin-top: 20px;
+  .tech-logo {
+    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+  }
+}
+
+#socials-container {
+  gap: 1rem;
+  .tech-logo {
+    max-width: 60px;
+  }
+}
+
+#tech-stack-container {
+  gap: 1.3rem;
+  .tech-logo {
+    max-width: 40px;   
+  }
 }
 
 #self-portrait {
   max-width: 200px;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
 }
 
-.tech-logo {
-  max-width: 60px;
-}
+
 
 #footer-container {
   background-color: white;
@@ -306,8 +372,8 @@ h1, h2, h3, h4, h5 {
 
 }
 
-#appstore-badge { width: 100px; }
-#google-badge { width: 100px; }
+#appstore-badge { width: 150px; }
+#google-badge { width: 150px; }
 
 .faint-text { color: lightgray; }
 .faint-description { color: gray; }
