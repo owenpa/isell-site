@@ -7,30 +7,30 @@ function Footer() {
         <div>
           <ul>
             <li className="bold-text">Typical Footer Content</li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">FAQ</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Terms of Service</a></li>
+            <li><a>About</a></li>
+            <li><a>FAQ</a></li>
+            <li><a>Careers</a></li>
+            <li><a>Contact Us</a></li>
+            <li><a>Terms of Service</a></li>
           </ul>
         </div>
         <div>
           <ul>
             <li className="bold-text">Tech Stack Used</li>
-            <li><a href="#">JavaScript</a></li>
-            <li><a href="#">HTML</a></li>
-            <li><a href="#">React.js</a></li>
-            <li><a href="#">SASS / SCSS</a></li>
-            <li><a href="#">VS Code</a></li>
+            <li><a>JavaScript</a></li>
+            <li><a>HTML</a></li>
+            <li><a>React.js</a></li>
+            <li><a>SASS / SCSS</a></li>
+            <li><a>VS Code</a></li>
           </ul>
         </div>
         <div>
           <ul>
             <li className="bold-text">Notice:</li>
-            <li><a href="#">Nothing in the</a></li>
-            <li><a href="#">footer should</a></li>
-            <li><a href="#">do anything in</a></li>
-            <li><a href="#">the demo.</a></li>
+            <li><a>Nothing in the</a></li>
+            <li><a>footer should</a></li>
+            <li><a>do anything in</a></li>
+            <li><a>the demo.</a></li>
           </ul>
         </div>
         <div>
