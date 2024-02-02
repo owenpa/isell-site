@@ -70,6 +70,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #hero-container {
+  height: 40vh;
   display: flex;
   align-items: center;
 }
@@ -124,7 +125,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #pricing-container {
-  margin-top: 60px;
+  margin-top: 100px;
   width: 100%;
   display: flex;
 }
@@ -141,10 +142,42 @@ h1, h2, h3, h4, h5 {
     align-self: center;
     text-align: center;
   }
+
+  button {
+    border: none;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  #iron-button {
+    background-color: #DDDDDC;
+    color: #5c5c5c;
+    text-shadow: rgb(122, 122, 122) 1px 1px 2px;
+  }
+
+  #silver-button {
+    background-color: #727272;
+    color: #1d1d1d;
+    text-shadow: rgb(71, 71, 71) 1px 1px 2px;
+  }
+
+  #gold-button {
+    background-color: #FE9C2A;
+    color: #75440b;
+    text-shadow: #75440b 1px 1px 2px;
+  }
+
+  #platinum-button {
+    background-color: #A4CEF5;
+    color: #4b7194;
+    text-shadow: #2c4257 1px 1px 2px;
+  }
 }
 
 #features-container {
-  margin-top: 60px;
+  margin-top: 100px;
   width: 100%;
   display: flex;
 }
@@ -179,11 +212,23 @@ h1, h2, h3, h4, h5 {
   font-size: 0.8rem;
 }
 
+#about-container {
+  margin-top: 100px;
+}
+
 #appstore-badge { width: 100px; }
 #google-badge { width: 100px; }
 
 .faint-text { color: lightgray; }
 .faint-description { color: gray; }
+.bold-text { 
+  display: inline;
+  font-weight: bold; 
+}
+.underline-text {
+  display: inline;
+  text-decoration: underline;
+}
 
 @media (min-width: 0px) {
   #info-bar-container ul { 
