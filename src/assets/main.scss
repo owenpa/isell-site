@@ -15,6 +15,7 @@ html {
   scroll-behavior: smooth;
 }
 
+
 #root {
   margin: auto;
   display: flex;
@@ -64,6 +65,7 @@ h1, h2, h3, h4, h5 {
     font-weight: 600;
     a {
       text-decoration: none;
+      color: $text;
       &:hover {
         font-weight: bolder;
         text-decoration: underline;
@@ -159,13 +161,22 @@ h1, h2, h3, h4, h5 {
   grid-template-rows: repeat(1, 0fr);
   grid-column-gap: 10px;
   grid-row-gap: 0px;
+  img {
+    width: 150px;
+  }
   img:hover {
     transition: 0.2s;
-    -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
-    filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
+    &:hover {
+      -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.12));
+      filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, .121));
+    }
   }
   .app-rating {
+    font-size: 1.4rem;
+    padding: 0;
+    margin: 10px 0px;
     color: gold;
+    text-shadow: rgba(#3c5772, 14%) 1px 1px 5px;
   }
 }
 
@@ -320,6 +331,7 @@ h1, h2, h3, h4, h5 {
   grid-column-gap: 20px;
   grid-row-gap: 10px;
   button {
+    color: #006CFF;
     justify-self: center;
     width: fit-content;
     outline: none;
@@ -372,6 +384,7 @@ h1, h2, h3, h4, h5 {
 #about-container {
   max-width: 70%;
   margin-top: 100px;
+  color: #3c4144;
   hr {
     // border: 1px solid $primary;
     border: none;
@@ -499,9 +512,6 @@ h1, h2, h3, h4, h5 {
 
 }
 
-#appstore-badge { width: 150px; }
-#google-badge { width: 150px; }
-
 .faint-text { color: lightgray; }
 .faint-description { color: gray; }
 .bold-text { 
@@ -517,8 +527,11 @@ h1, h2, h3, h4, h5 {
   #grid-left, #grid-right { width: 80%; }
   #content-container { max-width: 90%; }
   #hero-container { flex-direction: column-reverse; }
-  #about-container { margin-top: 50px}
   footer { flex-direction: column; }
+  #about-container { 
+    margin-top: 50px;
+    max-width: 80%;
+  }
   #features-container { 
     flex-direction: column;
     align-items: center;
@@ -533,7 +546,7 @@ h1, h2, h3, h4, h5 {
       grid-template-columns: repeat(4, 90px);
       grid-template-rows: 90px;
       gap: 5px;
-      button:hover {
+      button, button:hover {
         font-size: 1rem;
       }
     }
