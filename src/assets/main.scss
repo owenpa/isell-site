@@ -513,7 +513,7 @@ h1, h2, h3, h4, h5 {
   text-decoration: underline;
 }
 
-@media (min-width: 0px) {
+@media (min-width: 0px) and (max-width: 900px) {
   #grid-left, #grid-right { width: 80%; }
   #content-container { max-width: 90%; }
   #hero-container { flex-direction: column-reverse; }
@@ -562,31 +562,11 @@ h1, h2, h3, h4, h5 {
 }
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  // #content-container {max-width: 550px;}
-  #hero-container {
-    flex-direction: row;
-  }
-  #features-container { 
-    flex-direction: row;
-    align-items: center;
-  }
-  #grid-left, #grid-right { width: 50%; }
   #navbar-container ul h3:first-child { margin-right: 100px; }
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
   #navbar-container ul h3:first-child { margin-right: 200px; }
-}
-@media(max-width: 901px) {
-  #tier-grid {
-    display: grid;
-    grid-template-columns: 100px;
-    grid-template-rows: repeat(4, 100px);
-    grid-row-gap: 10px;
-    button {
-      font-size: 1rem;
-    }
-  }
 }
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
