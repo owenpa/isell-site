@@ -1,5 +1,5 @@
 #iSell Demo Website
-![iSell Demo Website](https://raw.githubusercontent.com/owenpa/isell-site/src/assets/1.PNG)
+![iSell Demo Website](https://raw.githubusercontent.com/owenpa/isell-site/main/src/assets/1.PNG)
 A landing page demo with a focus towards selling an application for your phone.
 
 <div align="center" style="display: flex; justify-content: center; gap: 25px;">
