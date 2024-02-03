@@ -1,14 +1,14 @@
 const vitalsUrl = 'https://vitals.vercel-analytics.com/v1/vitals';
 
 function getConnectionSpeed() {
-  return 'connection' in navigator &&
-    navigator['connection'] &&
-    'effectiveType' in navigator['connection']
-    ? navigator['connection']['effectiveType']
+  return 'connection' in navigator
+    && navigator.connection
+    && 'effectiveType' in navigator.connection
+    ? navigator.connection.effectiveType
     : '';
 }
 
-export function sendToVercelAnalytics(metric) {
+function sendToVercelAnalytics(metric) {
   const analyticsId = process.env.REACT_APP_VERCEL_ANALYTICS_ID;
   if (!analyticsId) {
     return;
@@ -30,11 +30,14 @@ export function sendToVercelAnalytics(metric) {
   });
   if (navigator.sendBeacon) {
     navigator.sendBeacon(vitalsUrl, blob);
-  } else
+  } else {
     fetch(vitalsUrl, {
       body: blob,
       method: 'POST',
       credentials: 'omit',
       keepalive: true,
     });
+  }
 }
+
+export default sendToVercelAnalytics;
