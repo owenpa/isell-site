@@ -16,6 +16,9 @@ html {
 }
 
 #root {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: 100%;
 }
@@ -39,7 +42,6 @@ h1, h2, h3, h4, h5 {
   margin-bottom: 3rem;
   h3 {
     margin: 0;
-    padding: 0;
     padding: 0.8rem;
   }
   ul {
@@ -73,6 +75,67 @@ h1, h2, h3, h4, h5 {
   }
 }
 
+#hamburger-container {
+  overflow: hidden;
+  z-index: 1000;
+  h3 {
+    font-size: 2rem;
+    margin: 0;
+  }
+  button { 
+    background: none;
+    border: none;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none !important;
+    z-index: 999;
+    width: 100%;
+    height: fit-content;
+    background-color: #f5f7f8;  
+    position: fixed;
+    top: 0;
+    margin: 0;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-left: 0;
+  }
+  li {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.3rem;
+    a {
+      color: $text;
+      text-decoration: none;
+      &:hover {
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+      &:active {
+        color: $text;
+      }
+    }
+  }
+}
+
+#hamburger-menu, #x-menu {
+  z-index: 1000;
+  margin: 20px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 2.5rem;
+  filter: brightness(10%);
+}
+
+#x-menu {
+  height: 2rem;
+  margin: 25px;
+}
+
 #content-container {
   display: flex;
   align-items: center;
@@ -86,6 +149,7 @@ h1, h2, h3, h4, h5 {
   margin-top: 10vh;
   display: flex;
   align-items: center;
+  max-width: 100vw;
 }
 
 #hero-app-download {
@@ -106,7 +170,9 @@ h1, h2, h3, h4, h5 {
 }
 
 #angled-phone {
-  width: 230px;
+  height: auto;
+  max-width: 230px;
+  width: auto;
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
@@ -114,8 +180,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #front-facing-phone {
-  width: 160px;
-  height: fit-content;
+  max-width: 160px;
   -webkit-filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
   filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.08));
 }
@@ -305,6 +370,7 @@ h1, h2, h3, h4, h5 {
 }
 
 #about-container {
+  max-width: 70%;
   margin-top: 100px;
   hr {
     // border: 1px solid $primary;
@@ -448,26 +514,79 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (min-width: 0px) {
+  #grid-left, #grid-right { width: 80%; }
+  #content-container { max-width: 90%; }
+  #hero-container { flex-direction: column-reverse; }
+  #about-container { margin-top: 50px}
+  footer { flex-direction: column; }
+  #features-container { 
+    flex-direction: column;
+    align-items: center;
+  }
+  #pricing-container {
+    flex-direction: column;
+    align-items: center;
+    #grid-image-right {
+      height: 200px;
+    }
+    #tier-grid {
+      grid-template-columns: repeat(4, 90px);
+      grid-template-rows: 90px;
+      gap: 5px;
+      button:hover {
+        font-size: 1rem;
+      }
+    }
+  }
+  #navbar-container { display: none; }
   #info-bar-container ul { 
     flex-wrap: wrap; 
-    width: 350px;
+    max-width: 370px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
   }
 }
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  #hamburger-container { display: none; }
+  #content-container { max-width: 70%; }
+  #navbar-container {
+    display: block;
+  }
   #info-bar-container ul { 
     flex-wrap: nowrap; 
-    width: 100%;
+    max-width: 100%;
   }
   #navbar-container ul h3:first-child { margin-right: 0px; }
 }
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
+  // #content-container {max-width: 550px;}
+  #hero-container {
+    flex-direction: row;
+  }
+  #features-container { 
+    flex-direction: row;
+    align-items: center;
+  }
+  #grid-left, #grid-right { width: 50%; }
   #navbar-container ul h3:first-child { margin-right: 100px; }
 }
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) { 
   #navbar-container ul h3:first-child { margin-right: 200px; }
+}
+@media(max-width: 901px) {
+  #tier-grid {
+    display: grid;
+    grid-template-columns: 100px;
+    grid-template-rows: repeat(4, 100px);
+    grid-row-gap: 10px;
+    button {
+      font-size: 1rem;
+    }
+  }
 }
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) { 
