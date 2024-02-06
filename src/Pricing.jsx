@@ -10,7 +10,7 @@ function Pricing() {
   const [displayedTier, setDisplayedTier] = useState('iron-button');
 
   return (
-    <div id="pricing-container">
+    <div id="pricing-container" className="reveal-container">
       <div id="grid-left">
         <p className="container-title">PRICING TIERS</p>
         <h2 style={{ display: 'inline' }}>

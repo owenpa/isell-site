@@ -9,7 +9,7 @@ import linkedinLogo from './assets/linkedin.png';
 
 function Developer() {
   return (
-    <div id="developer-container">
+    <div id="developer-container" className="reveal-container">
       <h1>Brought to you by Owen Hill</h1>
       <img src={me} alt="man smiling" id="self-portrait" />
       <div id="socials-container">
