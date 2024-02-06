@@ -4,7 +4,7 @@ import angledPhone from './assets/angledphone.png';
 
 function Hero() {
   return (
-    <div id="hero-container">
+    <div id="hero-container" className="reveal-container">
       <div id="left-hero">
         <h1>You should buy this app!</h1>
         <h4>With the features that iSell offers, you&apos;ll be able to increase sales.</h4>

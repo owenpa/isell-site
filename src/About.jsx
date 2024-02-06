@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-one-expression-per-line */
 function About() {
   return (
-    <div id="about-container">
+    <div id="about-container" className="reveal-container">
       <p>In place of the current text, you would want to
         replace this with information either about the product
         or the team behind it. I will say that this website was

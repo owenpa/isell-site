@@ -2,7 +2,7 @@ import phone from './assets/frontfacingphone.png';
 
 function Features() {
   return (
-    <div id="features-container">
+    <div id="features-container" className="reveal-container">
       <div id="grid-image-left">
         <img id="front-facing-phone" src={phone} alt="Front facing blank iPhone" />
       </div>
